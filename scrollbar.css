@@ -25,7 +25,7 @@ body {
     content: '';
     width: 92px;
     height: 92px;
-    background: url(gear.svg);
+    
     position: fixed;
     right: 10px;
 }
