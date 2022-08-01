@@ -1,0 +1,40 @@
+body::-webkit-scrollbar {
+    width: 0px;
+    /* width of the entire scrollbar */
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+body {
+    margin: 0;
+}
+
+#scrollBar {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 100px;
+    background: rgba(1, 1, 1, 0.1);
+
+}
+
+#scrollBarGear {
+    content: '';
+    width: 92px;
+    height: 92px;
+    background: url(gear.svg);
+    position: fixed;
+    right: 10px;
+}
+
+#scrollBarRack {
+    content: '';
+    width: 18px;
+    background: url(th.svg);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
