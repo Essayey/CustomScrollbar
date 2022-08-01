@@ -7,7 +7,7 @@ let gear = document.createElement('div');
 gear.id = 'scrollBarGear';
 // Gear initital position position 
 let angle = 32;
-let scrollRatio = (document.body.scrollHeight - window.innerHeight + 184)/window.innerHeight;
+let scrollRatio = (document.body.scrollHeight - (window.innerHeight - 92))/(window.innerHeight - 92);
 let gearTop;
 calculatePosition();
 
@@ -27,7 +27,7 @@ console.log(mechNode);
 window.addEventListener('scroll', calculatePosition);
 
 window.addEventListener('resize', () => {
-    scrollRatio = (document.body.scrollHeight - window.innerHeight + 184)/window.innerHeight;
+    scrollRatio = (document.body.scrollHeight - (window.innerHeight - 92))/(window.innerHeight - 92);
     calculatePosition();
     th.style.height = `${window.innerHeight}px`;
     mech.style.height = `${window.innerHeight}px`;
@@ -35,7 +35,7 @@ window.addEventListener('resize', () => {
 
 mechNode.addEventListener('click', function(e){
     window.scrollTo({
-        top: (e.pageY - window.scrollY) * scrollRatio - 65,
+        top: (e.pageY - window.scrollY) * scrollRatio,
         behavior: "smooth"
     });
     calculatePosition();
@@ -48,7 +48,7 @@ mechNode.addEventListener('mousedown', function(e){
     document.onmousedown = (e) => {return false;}
     onmousemove = function(e) {
         window.scrollTo({
-            top: (e.pageY - window.scrollY) * scrollRatio - 65,
+            top: (e.pageY - window.scrollY) * scrollRatio,
             behavior: "auto"
         });   
         calculatePosition(); 
